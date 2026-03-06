@@ -9,16 +9,21 @@ jobs:
       - name: checkout code
         run: echo "Checkc out code"
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build  app
         run: echo "Build step"
   deploy:
+    needs:
+      - build
+      - code
     runs-on: ubuntu-latest
     steps:
       - name: deploy app
         run: echo "Deploy the app"
   test:
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: test app
