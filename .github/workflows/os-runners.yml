@@ -29,3 +29,13 @@ jobs:
           echo "OS: $(uname -a)"
           echo "Hostname: $(hostname)"
           echo "User: $(whoami)"
+
+  tools-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check installed tools
+        run: |
+          docker --version
+          python --version
+          node --version
+          git --version
