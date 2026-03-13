@@ -18,7 +18,7 @@ jobs:
         run: echo "${{ github.ref_name }}"
 
       - name: Date & time
-        run: echo $DATE
+        run: echo "$DATE"
 
   details:
     runs-on: ubuntu-latest
