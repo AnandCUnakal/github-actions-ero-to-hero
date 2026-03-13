@@ -21,10 +21,10 @@ jobs:
         run: echo "Branch name is ${{ github.ref_name }}"
 
       - name: List files in the repository
-        run: ls -la
+        run: lslsl -la
 
       - name: Print runner operating system
-        run: echo "Runner OS is ${{ runner.os }}"
+        run: eco "Runner OS is ${{ runner.os }}"
 
   details:
     runs-on: ubuntu-latest
