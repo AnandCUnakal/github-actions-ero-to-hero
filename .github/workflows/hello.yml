@@ -14,11 +14,17 @@ jobs:
       - name: say hello to username
         run: echo "hello $USER"
 
-      - name: github branch
-        run: echo "${{ github.ref_name }}"
+      - name: Print current date and time
+        run: date
 
-      - name: Date & time
-        run: echo "$DATE"
+      - name: Print branch name
+        run: echo "Branch name is ${{ github.ref_name }}"
+
+      - name: List files in the repository
+        run: ls -la
+
+      - name: Print runner operating system
+        run: echo "Runner OS is ${{ runner.os }}"
 
   details:
     runs-on: ubuntu-latest
