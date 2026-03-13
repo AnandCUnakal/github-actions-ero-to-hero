@@ -14,9 +14,17 @@ jobs:
       - name: say hello to username
         run: echo "hello $USER"
 
+      - name: github branch
+        run: echo "${{ github.ref_name }}"
+
+      - name: Date & time
+        run: echo $DATE
+
   details:
     runs-on: ubuntu-latest
     steps:
     - name: docker and python version
       run: docker --version && python --version
+
+    
       
